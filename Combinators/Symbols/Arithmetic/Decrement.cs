@@ -16,7 +16,6 @@ namespace Combinators.Symbols.Arithmetic
                 yield return a;
             else
                 yield return new Number(num.Value - 1);
-            
         }
     }
 }

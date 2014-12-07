@@ -66,8 +66,6 @@ namespace Combinators.Machines
         private static Reduction? Reduce(IEnumerable<ISymbol> symbols)
         {
             //Sanity checks
-            if (symbols == null)
-                throw new ArgumentNullException("symbols");
             if (!symbols.Any())
                 return null;
 
