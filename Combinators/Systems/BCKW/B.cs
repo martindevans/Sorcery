@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Combinators.Symbols;
 
 namespace Combinators.Systems.BCKW
@@ -9,17 +10,13 @@ namespace Combinators.Systems.BCKW
     public class B
         : BaseCombinator3
     {
+        private const string D = "Bxyz = x(yz)";
+
         protected override IEnumerable<ISymbol> Combine(ISymbol x, ISymbol y, ISymbol z)
         {
-            //Fail is Y is not applicable
-            var app = y as IApplicable;
-            if (app == null)
-                throw new PatternMatchException("B y is not applicable");
+            var yz = y.Match<IApplicable>(D, "y").ApplyTo(z).Single();
 
-            yield return x;
-
-            foreach (var symbol in app.ApplyTo(z))
-                yield return symbol;
+            return x.Match<IApplicable>(D, "x").ApplyTo(yz);
         }
     }
 }

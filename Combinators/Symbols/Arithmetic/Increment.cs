@@ -10,9 +10,7 @@ namespace Combinators.Symbols.Arithmetic
     {
         public IEnumerable<ISymbol> ApplyTo(ISymbol a)
         {
-            var num = a as Number;
-            if (num == null)
-                throw new PatternMatchException("Increment not applied to a Number");
+            var num = a.Match<Number>("Increment x", "x");
 
             yield return new Number(num.Value + 1);
         }

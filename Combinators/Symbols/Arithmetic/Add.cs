@@ -7,15 +7,10 @@ namespace Combinators.Symbols.Arithmetic
     {
         protected override IEnumerable<ISymbol> Combine(ISymbol a, ISymbol b)
         {
-            var aa = a as Number;
-            var bb = b as Number;
-
-            if (aa == null)
-                throw new PatternMatchException("Add a is not a Number");
-            if (bb == null)
-                throw new PatternMatchException("Add b is not a Number");
-
-            yield return new Number(aa.Value + bb.Value);
+            yield return new Number(
+                a.Match<Number>("Add x y", "x").Value +
+                b.Match<Number>("Add x y", "y").Value
+            );
         }
     }
 }

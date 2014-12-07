@@ -1,11 +1,11 @@
-﻿using Combinators.Machines;
+﻿using System.Linq;
+using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
 using Combinators.Systems.BCKW;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 
-namespace Combinators.Test.BCKW
+namespace Combinators.Test.Systems.BCKW
 {
     [TestClass]
     public class BCKWTests
@@ -13,12 +13,12 @@ namespace Combinators.Test.BCKW
         private readonly IMachine _machine = new StackMachine(); 
 
         [TestMethod]
-        public void B_Applies_Y_To_Z()
+        public void B_Applies_X_To_Y_To_Z()
         {
-            // B 3 ++ 1 => 3 2
+            // B ( ++ ++ 1 ) => 3
             _machine.Push(1);
             _machine.Push(new Increment());
-            _machine.Push(3);
+            _machine.Push(new Increment());
             _machine.Push(new B());
 
             int iterations = 0;
@@ -26,10 +26,7 @@ namespace Combinators.Test.BCKW
                 iterations++;
             Assert.AreEqual(3, iterations);
 
-            var symbols = _machine.Symbols.ToArray();
-            Assert.AreEqual(2, symbols.Length);
-            Assert.AreEqual(new Number(3), symbols[0]);
-            Assert.AreEqual(new Number(2), symbols[1]);
+            Assert.AreEqual(new Number(3), _machine.Symbols.Single());
         }
 
         [TestMethod]
