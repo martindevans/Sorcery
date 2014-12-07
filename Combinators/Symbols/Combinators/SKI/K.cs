@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Combinators.Symbols;
 
-namespace Combinators.Systems.SKI
+namespace Combinators.Symbols.Combinators.SKI
 {
     /// <summary>
     /// K x y = x

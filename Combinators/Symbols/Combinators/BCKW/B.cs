@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Combinators.Symbols;
 
-namespace Combinators.Systems.BCKW
+namespace Combinators.Symbols.Combinators.BCKW
 {
     /// <summary>
     /// B x y z = x (y z)

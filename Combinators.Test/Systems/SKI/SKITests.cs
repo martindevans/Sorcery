@@ -2,7 +2,7 @@
 using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
-using Combinators.Systems.SKI;
+using Combinators.Symbols.Combinators.SKI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Combinators.Test.Systems.SKI

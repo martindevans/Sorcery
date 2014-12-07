@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Combinators.Symbols;
 
-namespace Combinators.Systems.SKI
+namespace Combinators.Symbols.Combinators.SKI
 {
     /// <summary>
     /// Sxyz = xz(yz)

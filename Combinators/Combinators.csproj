@@ -42,10 +42,10 @@
   <ItemGroup>
     <Compile Include="Machines\ErrorMode.cs" />
     <Compile Include="Symbols\Arithmetic\Multiply.cs" />
-    <Compile Include="Systems\BCKW\B.cs" />
-    <Compile Include="Systems\BCKW\C.cs" />
-    <Compile Include="Systems\BCKW\K.cs" />
-    <Compile Include="Systems\BCKW\W.cs" />
+    <Compile Include="Symbols\Combinators\BCKW\B.cs" />
+    <Compile Include="Symbols\Combinators\BCKW\C.cs" />
+    <Compile Include="Symbols\Combinators\BCKW\K.cs" />
+    <Compile Include="Symbols\Combinators\BCKW\W.cs" />
     <Compile Include="Symbols\IApplicable.cs" />
     <Compile Include="Machines\IMachine.cs" />
     <Compile Include="PatternMatchException.cs" />
@@ -53,9 +53,9 @@
     <Compile Include="Symbols\BaseCombinator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Symbols\ISymbol.cs" />
-    <Compile Include="Systems\SKI\I.cs" />
-    <Compile Include="Systems\SKI\K.cs" />
-    <Compile Include="Systems\SKI\S.cs" />
+    <Compile Include="Symbols\Combinators\SKI\I.cs" />
+    <Compile Include="Symbols\Combinators\SKI\K.cs" />
+    <Compile Include="Symbols\Combinators\SKI\S.cs" />
     <Compile Include="Symbols\Arithmetic\Subtract.cs" />
     <Compile Include="Symbols\Arithmetic\Add.cs" />
     <Compile Include="Symbols\Arithmetic\Decrement.cs" />

@@ -2,7 +2,7 @@
 using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
-using Combinators.Systems.BCKW;
+using Combinators.Symbols.Combinators.BCKW;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Combinators.Test.Systems.BCKW
