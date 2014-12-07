@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Combinators.Machines;
 using Combinators.Symbols;
-using Combinators.Symbols.Arithmetic;
+using Combinators.Symbols.Combinators.Arithmetic;
 using Combinators.Symbols.Combinators.SKI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Combinators.Test.Systems.SKI
+namespace Combinators.Test.Symbols.Combinators.SKI
 {
     [TestClass]
     public class SKITests

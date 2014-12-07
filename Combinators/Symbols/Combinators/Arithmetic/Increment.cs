@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Combinators.Symbols.Arithmetic
+namespace Combinators.Symbols.Combinators.Arithmetic
 {
     /// <summary>
     /// When applied to a number, make the number one larger

@@ -52,16 +52,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Machines\StackMachineTest.cs" />
-    <Compile Include="Symbols\Arithmetic\MultiplyTests.cs" />
-    <Compile Include="Symbols\Arithmetic\AddTests.cs" />
-    <Compile Include="Symbols\Arithmetic\DecrementTests.cs" />
-    <Compile Include="Symbols\Arithmetic\IncrementTests.cs" />
-    <Compile Include="Symbols\Arithmetic\SubtractTests.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\MultiplyTests.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\AddTests.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\DecrementTests.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\IncrementTests.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\SubtractTests.cs" />
+    <Compile Include="Symbols\Combinators\YTests.cs" />
     <Compile Include="Symbols\NumberTests.cs" />
-    <Compile Include="Systems\BCKW\BCKWTests.cs" />
+    <Compile Include="Symbols\Combinators\BCKW\BCKWTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Systems\SKI\Playground.cs" />
-    <Compile Include="Systems\SKI\SKITests.cs" />
+    <Compile Include="Symbols\Combinators\SKI\Playground.cs" />
+    <Compile Include="Symbols\Combinators\SKI\SKITests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Combinators\Combinators.csproj">

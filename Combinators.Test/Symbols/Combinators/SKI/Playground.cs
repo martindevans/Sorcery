@@ -1,8 +1,8 @@
 ﻿using Combinators.Machines;
-using Combinators.Symbols.Arithmetic;
+using Combinators.Symbols.Combinators.Arithmetic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Combinators.Test.Systems.SKI
+namespace Combinators.Test.Symbols.Combinators.SKI
 {
     [TestClass]
     public class Playground

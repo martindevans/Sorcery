@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Combinators.Machines;
 using Combinators.Symbols;
-using Combinators.Symbols.Arithmetic;
+using Combinators.Symbols.Combinators.Arithmetic;
 using Combinators.Symbols.Combinators.BCKW;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Combinators.Test.Systems.BCKW
+namespace Combinators.Test.Symbols.Combinators.BCKW
 {
     [TestClass]
     public class BCKWTests

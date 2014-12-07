@@ -1,6 +1,6 @@
 ﻿using Combinators.Machines;
 using Combinators.Symbols;
-using Combinators.Symbols.Arithmetic;
+using Combinators.Symbols.Combinators.Arithmetic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 

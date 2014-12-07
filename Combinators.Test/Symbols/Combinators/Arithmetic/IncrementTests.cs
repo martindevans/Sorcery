@@ -1,10 +1,10 @@
-﻿using Combinators.Machines;
+﻿using System.Linq;
+using Combinators.Machines;
 using Combinators.Symbols;
-using Combinators.Symbols.Arithmetic;
+using Combinators.Symbols.Combinators.Arithmetic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 
-namespace Combinators.Test.Symbols.Arithmetic
+namespace Combinators.Test.Symbols.Combinators.Arithmetic
 {
     [TestClass]
     public class IncrementTests

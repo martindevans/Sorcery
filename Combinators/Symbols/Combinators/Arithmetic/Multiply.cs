@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Combinators.Symbols.Arithmetic
+namespace Combinators.Symbols.Combinators.Arithmetic
 {
     public class Multiply
         : BaseCombinator2
