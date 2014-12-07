@@ -69,6 +69,7 @@ namespace Combinators.Machines
         /// Stateless reduction, if reduction causes an exception it will not change the stack
         /// </summary>
         /// <param name="symbols"></param>
+        /// <param name="errorMode"></param>
         /// <returns></returns>
         private static Reduction? Reduce(IEnumerable<ISymbol> symbols, ErrorMode errorMode)
         {

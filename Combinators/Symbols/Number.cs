@@ -5,7 +5,7 @@ using System.Numerics;
 namespace Combinators.Symbols
 {
     public class Number
-        : ISymbol, IEquatable<BigInteger>, IEquatable<Number>
+        : ISymbol, IEquatable<Number>
     {
         private readonly BigInteger _value;
         public BigInteger Value
@@ -21,14 +21,9 @@ namespace Combinators.Symbols
             _value = value;
         }
 
-        public bool Equals(BigInteger other)
-        {
-            return other == _value;
-        }
-
         public bool Equals(Number other)
         {
-            return Equals(other.Value);
+            return Value == other.Value;
         }
 
         public override bool Equals(object obj)
@@ -36,9 +31,6 @@ namespace Combinators.Symbols
             var a = obj as Number;
             if (a != null)
                 return Equals(a);
-
-            if (obj is BigInteger)
-                return Equals((BigInteger)obj);
 
             return false;
         }
