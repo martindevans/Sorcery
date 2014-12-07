@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Combinators.Symbols;
 
-namespace Combinators.BCKW
+namespace Combinators.Systems.BCKW
 {
     /// <summary>
     /// K x y = x

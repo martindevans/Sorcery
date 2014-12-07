@@ -1,8 +1,7 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Combinators
+namespace Combinators.Symbols
 {
     internal class PartialApplication
         : IApplicable

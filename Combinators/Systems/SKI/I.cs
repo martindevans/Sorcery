@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Combinators.Symbols;
 
-namespace Combinators.SKI
+namespace Combinators.Systems.SKI
 {
     /// <summary>
     /// Ix = x

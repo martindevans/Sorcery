@@ -1,6 +1,7 @@
-﻿using Combinators.SKI;
+﻿using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
+using Combinators.Systems.SKI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 
@@ -9,7 +10,7 @@ namespace Combinators.Test.SKI
     [TestClass]
     public class SKITests
     {
-        private readonly Machine _machine = new Machine(); 
+        private readonly StackMachine _machine = new StackMachine(); 
 
         [TestMethod]
         public void I_Returns_X()

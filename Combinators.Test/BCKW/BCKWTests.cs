@@ -1,6 +1,7 @@
-﻿using Combinators.BCKW;
+﻿using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
+using Combinators.Systems.BCKW;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 
@@ -9,7 +10,7 @@ namespace Combinators.Test.BCKW
     [TestClass]
     public class BCKWTests
     {
-        private readonly Machine _machine = new Machine(); 
+        private readonly IMachine _machine = new StackMachine(); 
 
         [TestMethod]
         public void B_Applies_Y_To_Z()

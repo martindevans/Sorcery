@@ -1,16 +1,19 @@
 ﻿using System.Collections.Generic;
+using Combinators.Symbols;
 
-namespace Combinators.SKI
+namespace Combinators.Systems.BCKW
 {
     /// <summary>
-    /// K x y = x
+    /// W x y = x y y
     /// </summary>
-    public class K
+    public class W
         : BaseCombinator2
     {
         protected override IEnumerable<ISymbol> Combine(ISymbol x, ISymbol y)
         {
             yield return x;
+            yield return y;
+            yield return y;
         }
     }
 }

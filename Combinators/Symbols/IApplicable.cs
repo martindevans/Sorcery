@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Combinators
+namespace Combinators.Symbols
 {
     public interface IApplicable
         : ISymbol
