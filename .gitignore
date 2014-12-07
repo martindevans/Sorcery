@@ -1,0 +1,9 @@
+Combinators/bin
+
+Combinators/obj
+
+Combinators.Test/bin
+
+Combinators.Test/obj
+
+*.cache
