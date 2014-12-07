@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Combinators.Symbols;
 
 namespace Combinators.Machines
@@ -44,34 +45,60 @@ namespace Combinators.Machines
         /// <returns>true, if a substitution was performed, otherwise false</returns>
         public bool Reduce()
         {
-            return Reduce(_symbols);
+            var r = Reduce(_symbols);
+            if (!r.HasValue)
+                return false;
+
+            for (int i = 0; i < r.Value.Remove; i++)
+                _symbols.Pop();
+
+            foreach (var symbol in r.Value.Produced)
+                _symbols.Push(symbol);
+
+            return true;
         }
 
         /// <summary>
-        /// Reduce a stack of symbols
+        /// Stateless reduction, if reduction causes an exception it will not change the stack
         /// </summary>
         /// <param name="symbols"></param>
-        /// <returns>true, if a substitution was performed, otherwise false</returns>
-        public static bool Reduce(Stack<ISymbol> symbols)
+        /// <returns></returns>
+        private static Reduction? Reduce(IEnumerable<ISymbol> symbols)
         {
+            //Sanity checks
             if (symbols == null)
                 throw new ArgumentNullException("symbols");
-            if (symbols.Count == 0)
-                return false;
+            if (!symbols.Any())
+                return null;
 
             //Check if the top of the stack is applicable
-            var applicable = symbols.Peek() as IApplicable;
+            var applicable = symbols.First() as IApplicable;
             if (applicable == null)
-                return false;
+                return null;
 
-            //Pop off operation
-            symbols.Pop();
+            var result = applicable.ApplyTo(symbols.Skip(1).First()).ToArray();
 
-            //Push result
-            foreach (var symbol in applicable.ApplyTo(symbols.Pop()))
-                symbols.Push(symbol);
+            return new Reduction(result, 2);
+        }
 
-            return true;
+        private struct Reduction
+        {
+            /// <summary>
+            /// Number of symbols consumed
+            /// </summary>
+            public readonly uint Remove;
+
+            /// <summary>
+            /// Symbols produced by this reduction
+            /// </summary>
+            public readonly ISymbol[] Produced;
+
+            public Reduction(ISymbol[] produced, uint remove)
+                : this()
+            {
+                Produced = produced;
+                Remove = remove;
+            }
         }
     }
 }

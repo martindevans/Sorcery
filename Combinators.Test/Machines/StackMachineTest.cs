@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Combinators.Machines;
-using Combinators.Symbols;
+﻿using Combinators.Machines;
 using Combinators.Symbols.Arithmetic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
@@ -31,19 +28,6 @@ namespace Combinators.Test.Machines
             var popped = _machine.Pop();
 
             Assert.AreEqual(sym, popped);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void Reducing_Null_Stack_Throws_NullReferenceException()
-        {
-            StackMachine.Reduce(null);
-        }
-
-        [TestMethod]
-        public void Reducing_Empty_Stack_Returns_False()
-        {
-            Assert.IsFalse(StackMachine.Reduce(new Stack<ISymbol>()));
         }
     }
 }

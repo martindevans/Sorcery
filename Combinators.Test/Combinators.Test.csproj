@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Machines\StackMachineTest.cs" />
     <Compile Include="Symbols\Arithmetic\AddTests.cs" />
+    <Compile Include="Symbols\Arithmetic\IncrementTests.cs" />
+    <Compile Include="Symbols\Arithmetic\SubtractTests.cs" />
     <Compile Include="Systems\BCKW\BCKWTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Systems\SKI\SKITests.cs" />

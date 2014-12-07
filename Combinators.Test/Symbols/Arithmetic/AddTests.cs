@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Combinators.Machines;
+﻿using Combinators.Machines;
 using Combinators.Symbols;
 using Combinators.Symbols.Arithmetic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace Combinators.Test.Symbols.Arithmetic
 {

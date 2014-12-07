@@ -8,7 +8,7 @@ namespace Combinators.Symbols.Arithmetic
         protected override IEnumerable<ISymbol> Combine(ISymbol a, ISymbol b)
         {
             var aa = a.Match<Number>("Subtract x y", "x");
-            var bb = b.Match<Number>("Subtract x y", "b");
+            var bb = b.Match<Number>("Subtract x y", "y");
 
             if (bb.Value >= aa.Value)
                 yield return new Number(0);
