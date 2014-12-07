@@ -7,3 +7,4 @@ Combinators.Test/bin
 Combinators.Test/obj
 
 *.cache
+*.user
