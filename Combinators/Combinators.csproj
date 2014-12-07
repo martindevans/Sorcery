@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Machines\ErrorMode.cs" />
+    <Compile Include="Symbols\Arithmetic\Multiply.cs" />
     <Compile Include="Systems\BCKW\B.cs" />
     <Compile Include="Systems\BCKW\C.cs" />
     <Compile Include="Systems\BCKW\K.cs" />

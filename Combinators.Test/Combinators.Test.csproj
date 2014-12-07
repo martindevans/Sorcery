@@ -58,6 +58,7 @@
     <Compile Include="Symbols\Arithmetic\SubtractTests.cs" />
     <Compile Include="Systems\BCKW\BCKWTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\SKI\Playground.cs" />
     <Compile Include="Systems\SKI\SKITests.cs" />
   </ItemGroup>
   <ItemGroup>

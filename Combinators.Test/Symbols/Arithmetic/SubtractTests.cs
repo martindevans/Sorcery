@@ -9,7 +9,7 @@ namespace Combinators.Test.Symbols.Arithmetic
     [TestClass]
     public class SubtractTests
     {
-        readonly IMachine _machine = new StackMachine();
+        readonly IMachine _machine = new StackMachine(ErrorMode.Throw);
 
         [TestMethod]
         public void Subtract_3_And_2_Returns_1()

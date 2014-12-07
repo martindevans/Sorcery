@@ -8,6 +8,8 @@ namespace Combinators.Machines
     public class StackMachine
         : IMachine
     {
+        private readonly ErrorMode _errorMode;
+
         private readonly Stack<ISymbol> _symbols = new Stack<ISymbol>();
 
         /// <summary>
@@ -19,6 +21,11 @@ namespace Combinators.Machines
             {
                 return _symbols;
             }
+        }
+
+        public StackMachine(ErrorMode errorMode = ErrorMode.Suppress)
+        {
+            _errorMode = errorMode;
         }
 
         /// <summary>
@@ -45,7 +52,7 @@ namespace Combinators.Machines
         /// <returns>true, if a substitution was performed, otherwise false</returns>
         public bool Reduce()
         {
-            var r = Reduce(_symbols);
+            var r = Reduce(_symbols, _errorMode);
             if (!r.HasValue)
                 return false;
 
@@ -63,7 +70,7 @@ namespace Combinators.Machines
         /// </summary>
         /// <param name="symbols"></param>
         /// <returns></returns>
-        private static Reduction? Reduce(IEnumerable<ISymbol> symbols)
+        private static Reduction? Reduce(IEnumerable<ISymbol> symbols, ErrorMode errorMode)
         {
             //Sanity checks
             if (!symbols.Any())
@@ -74,9 +81,23 @@ namespace Combinators.Machines
             if (applicable == null)
                 return null;
 
-            var result = applicable.ApplyTo(symbols.Skip(1).First()).ToArray();
-
-            return new Reduction(result, 2);
+            try
+            {
+                var result = applicable.ApplyTo(symbols.Skip(1).First()).ToArray();
+                return new Reduction(result, 2);
+            }
+            catch (PatternMatchException)
+            {
+                switch (errorMode)
+                {
+                    case ErrorMode.Suppress:
+                        return null;
+                    case ErrorMode.Throw:
+                        throw;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
         }
 
         private struct Reduction

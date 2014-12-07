@@ -10,7 +10,7 @@ namespace Combinators.Test.Systems.BCKW
     [TestClass]
     public class BCKWTests
     {
-        private readonly IMachine _machine = new StackMachine(); 
+        private readonly IMachine _machine = new StackMachine(ErrorMode.Throw); 
 
         [TestMethod]
         public void B_Applies_X_To_Y_To_Z()
