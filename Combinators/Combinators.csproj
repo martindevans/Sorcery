@@ -41,12 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Machines\ErrorMode.cs" />
+    <Compile Include="Symbols\Boolean.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\EqualTo.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\LessThan.cs" />
+    <Compile Include="Symbols\Combinators\Arithmetic\GreaterThan.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\Multiply.cs" />
     <Compile Include="Symbols\Combinators\BCKW\B.cs" />
     <Compile Include="Symbols\Combinators\BCKW\C.cs" />
     <Compile Include="Symbols\Combinators\BCKW\K.cs" />
     <Compile Include="Symbols\Combinators\BCKW\W.cs" />
-    <Compile Include="Symbols\Combinators\Y.cs" />
+    <Compile Include="Symbols\Combinators\BooleanLogic\And.cs" />
+    <Compile Include="Symbols\Combinators\BooleanLogic\Branch.cs" />
     <Compile Include="Symbols\IApplicable.cs" />
     <Compile Include="Machines\IMachine.cs" />
     <Compile Include="PatternMatchException.cs" />
@@ -62,6 +67,9 @@
     <Compile Include="Symbols\Combinators\Arithmetic\Decrement.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\Increment.cs" />
     <Compile Include="Symbols\Number.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Symbols\Combinators\Conditionals\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

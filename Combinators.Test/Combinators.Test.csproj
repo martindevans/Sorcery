@@ -52,12 +52,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Machines\StackMachineTest.cs" />
+    <Compile Include="PlaygroundA.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\MultiplyTests.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\AddTests.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\DecrementTests.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\IncrementTests.cs" />
     <Compile Include="Symbols\Combinators\Arithmetic\SubtractTests.cs" />
-    <Compile Include="Symbols\Combinators\YTests.cs" />
+    <Compile Include="Symbols\BooleanTests.cs" />
     <Compile Include="Symbols\NumberTests.cs" />
     <Compile Include="Symbols\Combinators\BCKW\BCKWTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Combinators.Symbols;
+using System.Collections.Generic;
 using System.Numerics;
-using Combinators.Symbols;
 
 namespace Combinators.Machines
 {
